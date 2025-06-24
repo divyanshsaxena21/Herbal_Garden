@@ -1,0 +1,39 @@
+/* HerbPage.css */
+body {
+  background-color: #D3ECCD;
+}
+
+.herb-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 3-4 cards per row */
+  gap: 70px; /* Increased gap between cards */
+  padding: 2rem;
+  padding-right: 5rem; /* Add space to the right */
+}
+
+.herb-list > div {
+  max-width: 300px; /* Prevent cards from becoming too wide */
+  margin-right: 20px; /* Add margin to the right of each card */
+}
+
+/* Ensure the last item in each row doesn't have extra right margin */
+.herb-list > div:last-child {
+  margin-right: 0;
+}
+
+/* Responsive layout: fewer cards per row on smaller screens */
+@media (max-width: 768px) {
+  .herb-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2 cards per row on smaller screens */
+    gap: 20px; /* Optional: smaller gap on mobile */
+  }
+
+  .herb-list > div {
+    margin-right: 10px; /* Slightly smaller margin on mobile */
+  }
+
+  /* Remove margin for the last item on mobile too */
+  .herb-list > div:last-child {
+    margin-right: 0;
+  }
+}

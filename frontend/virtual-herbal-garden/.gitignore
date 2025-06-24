@@ -1,0 +1,31 @@
+# Node.js dependencies in the frontend
+node_modules/
+
+# Frontend build folder
+/build/
+dist/
+
+# Log files (specific to frontend)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders specific to frontend
+.vscode/
+.idea/
+
+# Ignore package lock files in the frontend (if you're using yarn/npm)
+package-lock.json
+yarn.lock
+
+# Ignore Next.js or React build artifacts
+.next/

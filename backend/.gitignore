@@ -1,0 +1,25 @@
+# Node.js dependencies in the backend
+node_modules/
+
+# Backend build folder (if any)
+build/
+
+# Logs
+*.log
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders specific to the backend
+.vscode/
+.idea/
+
+# Ignore package lock files in the backend (if you're using yarn/npm)
+package-lock.json
+yarn.lock
