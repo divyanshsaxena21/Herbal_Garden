@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import BlogCard from "../components/BlogCard";
 
+const URL = process.env.REACT_APP_API_URL;
 const BlogPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);  // Loading state
@@ -9,7 +10,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/blogs")
+      .get(`${URL}/api/blogs`)
       .then((response) => {
         setBlogs(response.data);
         setLoading(false);
