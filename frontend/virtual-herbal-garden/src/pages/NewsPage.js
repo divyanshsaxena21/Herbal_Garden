@@ -10,7 +10,7 @@ const HerbNewsPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/herb-news") // Update with the new herb-news route
+      .get(${URL}/api/herb-news) // Update with the new herb-news route
       .then((response) => {
         setNews(response.data);
         setLoading(false);
