@@ -4,6 +4,7 @@ import HerbCard from "../components/HerbCard";
 import '../styles/HerbPage.css';
 import '../styles/Card.css'
 
+const URL = process.env.REACT_APP_API_URL;
 const HerbsPage = () => {
   const [herbs, setHerbs] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
@@ -11,11 +12,12 @@ const HerbsPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/herbs")
+      .get(`${URL}/api/herbs`)
       .then((response) => {
         setHerbs(response.data);
         setLoading(false); // Set loading to false after data is fetched
       })
+
       .catch((error) => {
         setError("Error fetching herbs.");
         setLoading(false); // Set loading to false if an error occurs
