@@ -7,10 +7,11 @@ const BlogDetailPage = () => {
   const [blog, setBlog] = useState(null);
   const [error, setError] = useState(null); // State to track error
 
+const URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     // Fetch the single blog post using the ID
     axios
-      .get(`http://localhost:5000/api/blogs/${id}`) // Use the full URL if not using proxy
+      .get(`${URL}/api/blogs/${id}`) // Use the full URL if not using proxy
       .then((response) => setBlog(response.data))
       .catch((error) => setError("Error fetching blog details"));
   }, [id]);
