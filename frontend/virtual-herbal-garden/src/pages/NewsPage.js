@@ -7,10 +7,10 @@ const HerbNewsPage = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);  // Loading state
   const [error, setError] = useState(null);      // Error state
-
+const URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     axios
-      .get(${URL}/api/herb-news) // Update with the new herb-news route
+      .get(`${URL}/api/herb-news`) // Update with the new herb-news route
       .then((response) => {
         setNews(response.data);
         setLoading(false);
